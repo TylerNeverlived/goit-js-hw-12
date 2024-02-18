@@ -175,7 +175,6 @@ function clearGallery() {
 
 function toggleLoader(isVisible) {
   refs.loaderEl.style.display = isVisible ? 'inline-block' : 'none';
-  refs.loaderEl.style.bottom = isVisible ? '50%' : '50%';
 }
 
 function toggleLoadMoreButton(isVisible) {
