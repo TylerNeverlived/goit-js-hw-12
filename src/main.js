@@ -50,6 +50,9 @@ async function onFormSubmit(e) {
       toggleLoader(false);
       toggleLoadMore(false);
       toggleLoadMoreButton(false);
+    } else if (data.hits.length < 15) {
+      toggleLoadMoreButton(false);
+      toggleLoader(false);
     } else {
       toggleLoadMoreButton(true);
       toggleLoader(false);
@@ -151,7 +154,7 @@ function renderImg(data) {
   const lightbox = new SimpleLightbox('[data-lightbox="photos"]');
   lightbox.refresh();
 
-  toggleLoadMoreButton(true);
+  // toggleLoadMoreButton(true);
   toggleLoadMore(false);
   smoothScrollToNextImages();
 }
